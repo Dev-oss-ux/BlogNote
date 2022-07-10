@@ -1,0 +1,2 @@
+# APPLICATION_BLOG_NOTE
+# BlogNote
