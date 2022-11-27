@@ -31,7 +31,7 @@ const NoteDetail = props => {
     const result = await AsyncStorage.getItem('notes');
     let notes = [];
     if (result !== null) notes = JSON.parse(result);
-
+  
     const newNotes = notes.filter(n => n.id !== note.id);
     setNotes(newNotes);
     await AsyncStorage.setItem('notes', JSON.stringify(newNotes));
