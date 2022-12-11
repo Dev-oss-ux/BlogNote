@@ -82,9 +82,11 @@ const NoteScreen = ({ user, navigation }) => {
       <StatusBar barStyle='dark-content' backgroundColor={colors.LIGHT} />
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <View style={styles.container}>
-          <Text style={styles.header}><Image source={require('../screens/image/mb.png')} style={styles.logo}/></Text>
+          <Text style={styles.header}>
+            <Image source={require('../screens/image/mb.png')} style={styles.logo}/></Text>
+        <Text style={styles.text}>Prise de note</Text> 
           {notes.length ? (
-            
+             
             <SearchBar
               value={searchQuery}
               onChangeText={handleOnSearchInput}
@@ -170,7 +172,11 @@ const styles = StyleSheet.create({
     right: 15,
     bottom: 50,
     zIndex: 1,
+    backgroundColor: colors.DARK
   },
+  text: {
+    fontWeight: 'bold'
+  }
 });
 
 export default NoteScreen;
